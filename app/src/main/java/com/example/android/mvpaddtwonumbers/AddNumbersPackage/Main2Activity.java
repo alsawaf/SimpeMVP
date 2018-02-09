@@ -37,11 +37,11 @@ public class Main2Activity extends AppCompatActivity implements iMain2ActivityIn
         CalculateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              ResultTextView.setText(String.valueOf(
-                      PresenterObject.Calculate(
-                              Integer.valueOf((Num1EditText.getText().toString()))
-                              ,Integer.valueOf((Num2EditText.getText().toString())))));
 
+
+                PresenterObject.DisplayResult(PresenterObject.Calculate(
+                        Integer.valueOf((Num1EditText.getText().toString()))
+                        ,Integer.valueOf((Num2EditText.getText().toString()))));
 
             }
         });
@@ -63,7 +63,7 @@ public class Main2Activity extends AppCompatActivity implements iMain2ActivityIn
     }
 
     @Override
-    public int Calculate(int Num1, int Num2) {
-        return Num1 +Num2;
+    public void DisplayResult(int Result) {
+        ResultTextView.setText(String.valueOf(Result));
     }
 }

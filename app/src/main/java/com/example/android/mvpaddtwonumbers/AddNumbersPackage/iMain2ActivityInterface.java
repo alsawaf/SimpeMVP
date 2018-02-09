@@ -8,6 +8,6 @@ public interface iMain2ActivityInterface {
 
     void NavigateToMainActivity();
 
-    int Calculate(int Num1 , int Num2);
+    void DisplayResult(int Result);
 
 }
